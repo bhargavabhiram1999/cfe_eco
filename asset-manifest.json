@@ -1,24 +1,36 @@
 {
   "files": {
-    "main.css": "/cfe_eco/static/css/main.a432b9cd.css",
-    "main.js": "/cfe_eco/static/js/main.db55bbce.js",
+    "main.css": "/cfe_eco/static/css/main.fc70dd31.css",
+    "main.js": "/cfe_eco/static/js/main.e6d5cc02.js",
     "static/js/453.930180f1.chunk.js": "/cfe_eco/static/js/453.930180f1.chunk.js",
     "static/media/video_scene_1.mp4": "/cfe_eco/static/media/video_scene_1.56c539991b285cf5a198.mp4",
     "static/media/room_outside2.jpeg": "/cfe_eco/static/media/room_outside2.8d4a3397dc4db200ea2c.jpeg",
+    "static/media/chipiri.jpeg": "/cfe_eco/static/media/chipiri.22417d0f4fa81a849c2a.jpeg",
     "static/media/maps.jpeg": "/cfe_eco/static/media/maps.22fbd467cc1a6253b784.jpeg",
+    "static/media/farm2.jpeg": "/cfe_eco/static/media/farm2.89557e8eac9b71a98409.jpeg",
+    "static/media/interaction3.jpeg": "/cfe_eco/static/media/interaction3.9fd85bd81c2604f53e60.jpeg",
+    "static/media/farm3.jpeg": "/cfe_eco/static/media/farm3.015430c2ccafdad3130f.jpeg",
+    "static/media/interaction2.jpeg": "/cfe_eco/static/media/interaction2.654aac71a3f5a54a87e8.jpeg",
+    "static/media/interaction1.jpeg": "/cfe_eco/static/media/interaction1.899b3e91a37aceb713c1.jpeg",
     "static/media/gudisa_2.jpeg": "/cfe_eco/static/media/gudisa_2.f3dbce038b008410fbba.jpeg",
+    "static/media/header.jpeg": "/cfe_eco/static/media/header.f3dbce038b008410fbba.jpeg",
+    "static/media/farm1.jpeg": "/cfe_eco/static/media/farm1.23769085e9741adc02c5.jpeg",
     "static/media/gudisa_1.jpeg": "/cfe_eco/static/media/gudisa_1.629da554442944e53642.jpeg",
     "static/media/title.jpeg": "/cfe_eco/static/media/title.629da554442944e53642.jpeg",
-    "static/media/beds1.jpeg": "/cfe_eco/static/media/beds1.16c8e0eba524cf6edd4d.jpeg",
-    "static/media/beds2.jpeg": "/cfe_eco/static/media/beds2.4691e17867a4b094710f.jpeg",
+    "static/media/bed3_2.jpeg": "/cfe_eco/static/media/bed3_2.627007be6b799d831c73.jpeg",
+    "static/media/beds3_1.jpeg": "/cfe_eco/static/media/beds3_1.16c8e0eba524cf6edd4d.jpeg",
+    "static/media/beds5_1.jpeg": "/cfe_eco/static/media/beds5_1.4691e17867a4b094710f.jpeg",
+    "static/media/Chavadikota_view_point.jpeg": "/cfe_eco/static/media/Chavadikota_view_point.b3f9b6b4eaf45e08ed95.jpeg",
+    "static/media/beds5_2.jpeg": "/cfe_eco/static/media/beds5_2.099b8e3b66efe8a77837.jpeg",
     "static/media/gudisa_3.jpeg": "/cfe_eco/static/media/gudisa_3.902f9f1bb6e829d89faa.jpeg",
+    "static/media/sunrise.jpeg": "/cfe_eco/static/media/sunrise.c95fafdc2cf57a025e68.jpeg",
     "index.html": "/cfe_eco/index.html",
-    "main.a432b9cd.css.map": "/cfe_eco/static/css/main.a432b9cd.css.map",
-    "main.db55bbce.js.map": "/cfe_eco/static/js/main.db55bbce.js.map",
+    "main.fc70dd31.css.map": "/cfe_eco/static/css/main.fc70dd31.css.map",
+    "main.e6d5cc02.js.map": "/cfe_eco/static/js/main.e6d5cc02.js.map",
     "453.930180f1.chunk.js.map": "/cfe_eco/static/js/453.930180f1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a432b9cd.css",
-    "static/js/main.db55bbce.js"
+    "static/css/main.fc70dd31.css",
+    "static/js/main.e6d5cc02.js"
   ]
 }
