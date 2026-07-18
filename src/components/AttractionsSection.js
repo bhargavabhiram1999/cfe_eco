@@ -66,7 +66,7 @@ function AttractionsSection() {
     <section id="attractions" className="info-section attractions-section">
       <div className="attractions-copy">
         <p className="section-label">Discover the region</p>
-        <h2>Attractions near Gudisa</h2>
+        <h2>Attractions near CFE Eco stay</h2>
         <p>
           The landscapes around Gudisa are full of calm viewpoints, sunrise trails, and immersive nature scenes that make every visit memorable.
         </p>
