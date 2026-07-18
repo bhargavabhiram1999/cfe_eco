@@ -5,7 +5,7 @@ function AboutSection() {
   return (
     <section id="about" className="info-section">
       <div>
-        <p className="section-label">About CFE</p>
+        <p className="section-label">Learn more</p>
         <h2>About CFE</h2>
         <p>
           The Centre for Development and Research (CDR) is a non-profit organization working since 1983 to uplift tribal and rural communities.
@@ -13,18 +13,22 @@ function AboutSection() {
         </p>
       </div>
       <div className="info-card">
-        <img
-          className="section-image"
-          src={aboutImage}
-          alt="Nature hills and peaceful eco stay surroundings"
-        />
-        <h3>Your stay experience</h3>
-        <ul>
-          <li>Eco-friendly cottages designed to blend with nature</li>
-          <li>Fresh mountain air, green hills, and open spaces</li>
-          <li>Natural farming and plantation areas</li>
-          <li>Quiet, relaxing environment away from city life</li>
-        </ul>
+        <div className="info-image-panel">
+          <img
+            className="section-image"
+            src={aboutImage}
+            alt="Nature hills and peaceful eco stay surroundings"
+          />
+        </div>
+        <div className="info-image-copy">
+          <h3>Your stay experience</h3>
+          <ul>
+            <li>Eco-friendly cottages designed to blend with nature</li>
+            <li>Fresh mountain air, green hills, and open spaces</li>
+            <li>Natural farming and plantation areas</li>
+            <li>Quiet, relaxing environment away from city life</li>
+          </ul>
+        </div>
       </div>
     </section>
   );

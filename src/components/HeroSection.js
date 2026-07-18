@@ -14,22 +14,27 @@ function HeroSection({ highlights }) {
         </p>
         <div className="hero-actions">
           <a href="#booking" className="cta-button">Book Your Stay</a>
-          <a href="#about" className="secondary-link">Experience more than stay</a>
+          <a href="#experience" className="secondary-link">Experience more than stay</a>
         </div>
       </div>
 
       <div className="hero-card">
-        <img
-          className="hero-image"
-          src={heroImage}
-          alt="Forest retreat surrounded by trees and greenery"
-        />
-        <h2>Why choose CFE Eco Stay</h2>
-        <ul>
-          {highlights.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
+        <div className="hero-image-panel">
+          <img
+            className="hero-image"
+            src={heroImage}
+            alt="Forest retreat surrounded by trees and greenery"
+          />
+        </div>
+        <div className="hero-image-copy">
+          <span className="section-label">Why choose CFE Eco Stay</span>
+          <h3>Spend your stay where nature leads the experience.</h3>
+          <ul>
+            {highlights.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );

@@ -63,9 +63,9 @@ function AttractionsSection() {
   }, []);
 
   return (
-    <section className="info-section attractions-section">
+    <section id="attractions" className="info-section attractions-section">
       <div className="attractions-copy">
-        <p className="section-label">Attractions near Gudisa</p>
+        <p className="section-label">Discover the region</p>
         <h2>Attractions near Gudisa</h2>
         <p>
           The landscapes around Gudisa are full of calm viewpoints, sunrise trails, and immersive nature scenes that make every visit memorable.
@@ -75,7 +75,7 @@ function AttractionsSection() {
       <div className="carousel-shell">
         <div className="carousel-row">
           {visibleItems.map((item) => (
-            <div key={`${item.index}-${item.position}`} className={`carousel-card ${item.position}`}>
+            <div key={item.position} className={`carousel-card ${item.position}`}>
               {item.type === 'video' ? (
                 <div className="video-wrapper">
                   <video

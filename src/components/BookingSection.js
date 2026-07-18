@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import contactData from '../data/contact.json';
 import mapsImage from '../assets/images/maps.jpeg';
 
@@ -43,6 +43,15 @@ function BookingSection() {
     }
   };
 
+  useEffect(() => {
+    function handleOpenEvent() {
+      setIsOpen(true);
+    }
+
+    window.addEventListener('openBookingModal', handleOpenEvent);
+    return () => window.removeEventListener('openBookingModal', handleOpenEvent);
+  }, []);
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -51,12 +60,16 @@ function BookingSection() {
     }
 
     const message = [
-      `Name: ${formData.name}`,
-      `Phone: ${formData.phone}`,
-      `Email: ${formData.email}`,
-      `Tentative booking date from: ${formData.fromDate}`,
-      `Tentative booking date to: ${formData.toDate}`,
-      `Number of persons: ${formData.persons}`,
+      'Hi there,\n',
+      'I hope you are well. I would like to enquire about booking a stay. Below are my details:',
+      '',
+      `Name: ${formData.name || '-'}`,
+      `Phone: ${formData.phone || '-'}`,
+      `Email: ${formData.email || '-'}`,
+      `Tentative stay: ${formData.fromDate || '-'} to ${formData.toDate || '-'}`,
+      `Number of persons: ${formData.persons || '-'}`,
+      '',
+      'Please let me know availability and next steps. Thank you!'
     ].join('\n');
 
     const encodedMessage = encodeURIComponent(message);
@@ -67,14 +80,16 @@ function BookingSection() {
 
   return (
     <section id="booking" className="booking-section">
-      <div>
-        <p className="section-label">Book your stay</p>
-        <h2>📍 Book Your Stay</h2>
-        <p>{contactData.bookingNote}</p>
-        <button type="button" className="whatsapp-button" onClick={() => setIsOpen(true)}>
-          <span className="whatsapp-icon" aria-hidden="true">💬</span>
-          Book via WhatsApp
-        </button>
+      <div className="booking-head">
+        <div className="booking-intro">
+          <p className="section-label">Reserve your stay</p>
+          <h2>📍 Book Your Stay</h2>
+          <p>{contactData.bookingNote}</p>
+        </div>
+
+        <div className="booking-actions">
+          {/* global fixed WhatsApp CTA replaces local button */}
+        </div>
       </div>
 
       <div className="booking-card">
