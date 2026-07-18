@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import gudisa1 from '../assets/images/gudisa_1.jpeg';
 import gudisa2 from '../assets/images/gudisa_2.jpeg';
 import gudisa3 from '../assets/images/gudisa_3.jpeg';
@@ -13,15 +13,54 @@ const mediaItems = [
 
 function AttractionsSection() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const activeItem = useMemo(() => mediaItems[activeIndex], [activeIndex]);
+  const previousIndex = (activeIndex + mediaItems.length - 1) % mediaItems.length;
+  const nextIndex = (activeIndex + 1) % mediaItems.length;
+
+  const visibleItems = [
+    { ...mediaItems[previousIndex], position: 'previous', index: previousIndex },
+    { ...mediaItems[activeIndex], position: 'active', index: activeIndex },
+    { ...mediaItems[nextIndex], position: 'next', index: nextIndex },
+  ];
 
   const showPrevious = () => {
     setActiveIndex((current) => (current === 0 ? mediaItems.length - 1 : current - 1));
   };
 
+  const [isVideoPaused, setIsVideoPaused] = useState(false);
+  const videoRefs = useRef({});
+  const autoPlayTimer = useRef(null);
+  const autoPlayDelay = 5000;
+
   const showNext = () => {
     setActiveIndex((current) => (current === mediaItems.length - 1 ? 0 : current + 1));
   };
+
+  const toggleVideoPlayback = (index) => {
+    const video = videoRefs.current[index];
+    if (!video) return;
+
+    if (video.paused) {
+      video.play();
+      setIsVideoPaused(false);
+    } else {
+      video.pause();
+      setIsVideoPaused(true);
+    }
+  };
+
+  React.useEffect(() => {
+    setIsVideoPaused(false);
+  }, [activeIndex]);
+
+  React.useEffect(() => {
+    autoPlayTimer.current = window.setInterval(() => {
+      setActiveIndex((current) => (current === mediaItems.length - 1 ? 0 : current + 1));
+    }, autoPlayDelay);
+
+    return () => {
+      window.clearInterval(autoPlayTimer.current);
+    };
+  }, []);
 
   return (
     <section className="info-section attractions-section">
@@ -34,15 +73,41 @@ function AttractionsSection() {
       </div>
 
       <div className="carousel-shell">
-        <div className="carousel-frame">
-          {activeItem.type === 'video' ? (
-            <video controls playsInline autoPlay muted loop className="carousel-media">
-              <source src={activeItem.src} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          ) : (
-            <img src={activeItem.src} alt={activeItem.alt} className="carousel-media" />
-          )}
+        <div className="carousel-row">
+          {visibleItems.map((item) => (
+            <div key={`${item.index}-${item.position}`} className={`carousel-card ${item.position}`}>
+              {item.type === 'video' ? (
+                <div className="video-wrapper">
+                  <video
+                    ref={(node) => {
+                      if (node) videoRefs.current[item.index] = node;
+                    }}
+                    playsInline
+                    muted
+                    loop
+                    autoPlay={item.position === 'active'}
+                    className="carousel-media"
+                  >
+                    <source src={item.src} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+
+                  {item.position === 'active' && (
+                    <button
+                      type="button"
+                      className="video-hover-overlay"
+                      onClick={() => toggleVideoPlayback(item.index)}
+                      aria-label={isVideoPaused ? 'Play video' : 'Pause video'}
+                    >
+                      {isVideoPaused ? '▶' : '⏸'}
+                    </button>
+                  )}
+                </div>
+              ) : (
+                <img src={item.src} alt={item.alt} className="carousel-media" />
+              )}
+            </div>
+          ))}
         </div>
 
         <div className="carousel-controls">
