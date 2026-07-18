@@ -1,0 +1,16 @@
+<svg width="900" height="600" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="600" fill="#eef4f0"/>
+  <rect y="450" width="900" height="150" fill="#7aa963"/>
+  <path d="M0 470 C120 400, 230 355, 340 395 C450 435, 570 470, 700 425 C780 400, 850 375, 900 395 L900 600 L0 600 Z" fill="#4e7d4b"/>
+  <rect x="95" y="145" width="710" height="290" rx="26" fill="#d5b087"/>
+  <rect x="135" y="185" width="290" height="160" rx="14" fill="#fffdf8"/>
+  <rect x="455" y="185" width="310" height="160" rx="14" fill="#fffdf8"/>
+  <rect x="145" y="370" width="610" height="90" rx="14" fill="#9a6b3d"/>
+  <rect x="175" y="210" width="100" height="68" fill="#6e8f4d"/>
+  <rect x="305" y="210" width="100" height="68" fill="#6e8f4d"/>
+  <rect x="485" y="210" width="100" height="68" fill="#6e8f4d"/>
+  <rect x="625" y="210" width="100" height="68" fill="#6e8f4d"/>
+  <rect x="210" y="395" width="205" height="30" fill="#4f3c2d"/>
+  <rect x="490" y="395" width="205" height="30" fill="#4f3c2d"/>
+  <path d="M190 150 C210 120, 250 112, 280 128" stroke="#7a4b2f" stroke-width="9" fill="none"/>
+</svg>
