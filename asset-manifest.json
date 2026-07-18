@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/cfe_eco/static/css/main.fc70dd31.css",
-    "main.js": "/cfe_eco/static/js/main.e6d5cc02.js",
+    "main.css": "/cfe_eco/static/css/main.cff8a0c9.css",
+    "main.js": "/cfe_eco/static/js/main.51c4e5e0.js",
     "static/js/453.930180f1.chunk.js": "/cfe_eco/static/js/453.930180f1.chunk.js",
     "static/media/video_scene_1.mp4": "/cfe_eco/static/media/video_scene_1.56c539991b285cf5a198.mp4",
     "static/media/room_outside2.jpeg": "/cfe_eco/static/media/room_outside2.8d4a3397dc4db200ea2c.jpeg",
@@ -25,12 +25,12 @@
     "static/media/gudisa_3.jpeg": "/cfe_eco/static/media/gudisa_3.902f9f1bb6e829d89faa.jpeg",
     "static/media/sunrise.jpeg": "/cfe_eco/static/media/sunrise.c95fafdc2cf57a025e68.jpeg",
     "index.html": "/cfe_eco/index.html",
-    "main.fc70dd31.css.map": "/cfe_eco/static/css/main.fc70dd31.css.map",
-    "main.e6d5cc02.js.map": "/cfe_eco/static/js/main.e6d5cc02.js.map",
+    "main.cff8a0c9.css.map": "/cfe_eco/static/css/main.cff8a0c9.css.map",
+    "main.51c4e5e0.js.map": "/cfe_eco/static/js/main.51c4e5e0.js.map",
     "453.930180f1.chunk.js.map": "/cfe_eco/static/js/453.930180f1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fc70dd31.css",
-    "static/js/main.e6d5cc02.js"
+    "static/css/main.cff8a0c9.css",
+    "static/js/main.51c4e5e0.js"
   ]
 }
